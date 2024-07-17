@@ -1,15 +1,11 @@
 import React from "react";
-import Post from "./components/Post";
+import PostList from "./components/PostList";
 
 function App() {
   return (
     <main>
       <h1>Posts</h1>
-      <Post author={"Max"} text={"I will never be poor"} />
-      <Post
-        author={"Zizzo"}
-        text={"Finish React + NextJs before Aug 1st 2024"}
-      />
+      <PostList />
     </main>
   );
 }
