@@ -1,5 +1,5 @@
 import React from "react";
-import "./post.css";
+import classes from "./Post.module.css";
 
 function Post({ author, text }) {
   const styleVar = {
@@ -8,7 +8,7 @@ function Post({ author, text }) {
   return (
     <div>
       <p style={{ color: "yellow" }}>Author: {author}</p>
-      <p className="message">Message: {text}</p>
+      <p className={classes.message}>Message: {text}</p>
     </div>
   );
 }
