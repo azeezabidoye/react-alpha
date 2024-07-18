@@ -6,7 +6,6 @@ function App() {
   return (
     <main>
       <h1>Posts</h1>
-      <NewPost />
       <PostList />
     </main>
   );
