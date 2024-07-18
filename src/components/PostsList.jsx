@@ -6,14 +6,8 @@ const PostList = () => {
   return (
     <div className={classes.posts}>
       <ul>
-        <li>
-          {" "}
-          <Post author={"Max"} text={"Be relaxed!"} />
-        </li>
-        <li>
-          {" "}
-          <Post author={"Zizzo"} text={"No more failure!"} />
-        </li>
+        <Post author={"Max"} text={"Be relaxed!"} />
+        <Post author={"Zizzo"} text={"No more failure!"} />
       </ul>
     </div>
   );
