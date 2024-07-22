@@ -14,10 +14,10 @@ function App() {
   }
   return (
     <>
-      <MainHeader />
+      <MainHeader onCreatePost={handleShowModal} />
       <main>
         <h1>Posts</h1>
-        <PostList onPosting={modalIsVisible} />
+        <PostList onPosting={modalIsVisible} onStopPosting={handleHideModal} />
       </main>
     </>
   );
