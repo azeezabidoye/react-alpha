@@ -5,29 +5,20 @@ import Modal from "./Modal";
 import classes from "./PostsList.module.css";
 
 const PostList = ({ onPosting, onStopPosting }) => {
-  const [enteredAuthor, setEnteredAuthor] = useState("");
-  const [enteredBody, setEnteredBody] = useState("");
+  const [posts, setPosts] = useState([]);
 
-  function handleAuthorChange(e) {
-    setEnteredAuthor(e.target.value);
+  function handleAddPost(postData) {
+    setPosts([postData, ...posts]);
   }
-  function handleBodyChange(e) {
-    setEnteredBody(e.target.value);
-  }
-
   return (
     <>
       {onPosting && (
         <Modal onClose={onStopPosting}>
-          <NewPost
-            onAuthorChange={handleAuthorChange}
-            onBodyChange={handleBodyChange}
-            onCancel={onStopPosting}
-          />
+          <NewPost onCancel={onStopPosting} />
         </Modal>
       )}
       <ul className={classes.posts}>
-        <Post author={enteredAuthor} text={enteredBody} />
+        <Post author={"Alawiye"} text={"React is awesome"} />
       </ul>
     </>
   );
