@@ -8,17 +8,19 @@ const PostList = ({ onPosting, onStopPosting }) => {
   const [posts, setPosts] = useState([]);
 
   function handleAddPost(postData) {
-    setPosts([postData, ...posts]);
+    setPosts((existing) => [postData, ...existing]);
   }
   return (
     <>
       {onPosting && (
         <Modal onClose={onStopPosting}>
-          <NewPost onCancel={onStopPosting} />
+          <NewPost onCancel={onStopPosting} onAddPost={handleAddPost} />
         </Modal>
       )}
       <ul className={classes.posts}>
-        <Post author={"Alawiye"} text={"React is awesome"} />
+        {posts.map((post) => (
+          <Post key={post.body} author={post.author} text={post.body} />
+        ))}
       </ul>
     </>
   );
