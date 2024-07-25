@@ -1,10 +1,11 @@
 import { React, useState } from "react";
+import { Outlet } from "react-router-dom";
 import PostList from "../components/PostsList";
-import MainHeader from "../components/MainHeader";
 
 function Posts() {
   return (
     <>
+      <Outlet />
       <main>
         <PostList />
       </main>

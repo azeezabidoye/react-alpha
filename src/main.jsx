@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "./routes/Posts.jsx";
-import NewPost from "./components/NewPost.jsx";
+import Posts from "./routes/Posts.jsx";
+import NewPost from "./routes/NewPost.jsx";
 import "./index.css";
 import RootLayout from "./routes/RootLayout.jsx";
 
@@ -13,11 +13,13 @@ const routerArray = [
     children: [
       {
         path: "/",
-        element: <App />,
-      },
-      {
-        path: "create-post",
-        element: <NewPost />,
+        element: <Posts />,
+        children: [
+          {
+            path: "create-post",
+            element: <NewPost />,
+          },
+        ],
       },
     ],
   },
