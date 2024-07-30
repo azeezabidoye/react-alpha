@@ -3,16 +3,16 @@ import Post from "./Post";
 import classes from "./PostsList.module.css";
 
 const PostList = () => {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
 
-  useEffect(() => {
-    async function fetchPosts() {
-      setIsFetching(true);
-      setIsFetching(false);
-    }
-    fetchPosts();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchPosts() {
+  //     setIsFetching(true);
+  //     setIsFetching(false);
+  //   }
+  //   fetchPosts();
+  // }, []);
 
   // function handleAddPost(postData) {
   //   fetch("http://localhost:8080/posts", {

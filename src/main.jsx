@@ -14,6 +14,7 @@ const routerArray = [
       {
         path: "/",
         element: <Posts />,
+        loader: postsLoader,
         children: [
           {
             path: "create-post",
