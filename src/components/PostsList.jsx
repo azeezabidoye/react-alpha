@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import Post from "./Post";
 import classes from "./PostsList.module.css";
+import { useLoaderData } from "react-router-dom";
 
 const PostList = () => {
-  // const [posts, setPosts] = useState([]);
-  const [isFetching, setIsFetching] = useState(false);
+  const posts = useLoaderData();
 
   // useEffect(() => {
   //   async function fetchPosts() {
@@ -27,20 +27,19 @@ const PostList = () => {
 
   return (
     <>
-      {!isFetching && posts.length > 0 && (
+      {posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((post) => (
             <Post key={post.body} author={post.author} text={post.body} />
           ))}
         </ul>
       )}
-      {!isFetching && posts.length === 0 && (
+      {posts.length === 0 && (
         <div style={{ textAlign: "center", color: "white" }}>
           <h2>No posts yet</h2>
           <p>Start adding posts...</p>
         </div>
       )}
-      {isFetching && <div>Loading posts...</div>}
     </>
   );
 };
