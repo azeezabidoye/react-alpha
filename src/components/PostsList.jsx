@@ -14,16 +14,16 @@ const PostList = () => {
   //   fetchPosts();
   // }, []);
 
-  function handleAddPost(postData) {
-    fetch("http://localhost:8080/posts", {
-      method: "POST",
-      body: JSON.stringify(postData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    setPosts((existing) => [postData, ...existing]);
-  }
+  // function handleAddPost(postData) {
+  //   fetch("http://localhost:8080/posts", {
+  //     method: "POST",
+  //     body: JSON.stringify(postData),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+  //   setPosts((existing) => [postData, ...existing]);
+  // }
 
   return (
     <>
