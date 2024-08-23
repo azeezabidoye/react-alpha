@@ -22,7 +22,7 @@ const PostList = () => {
   //       "Content-Type": "application/json",
   //     },
   //   });
-  setPosts((existing) => [postData, ...existing]);
+  // setPosts((existing) => [postData, ...existing]);
   // }
 
   return (
