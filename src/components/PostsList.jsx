@@ -6,24 +6,24 @@ import { useLoaderData } from "react-router-dom";
 const PostList = () => {
   const posts = useLoaderData();
 
-  // useEffect(() => {
-  //   async function fetchPosts() {
-  //     setIsFetching(true);
-  //     setIsFetching(false);
-  //   }
-  //   fetchPosts();
-  // }, []);
+  useEffect(() => {
+    async function fetchPosts() {
+      setIsFetching(true);
+      setIsFetching(false);
+    }
+    fetchPosts();
+  }, []);
 
-  // function handleAddPost(postData) {
-  //   fetch("http://localhost:8080/posts", {
-  //     method: "POST",
-  //     body: JSON.stringify(postData),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   });
-  //   setPosts((existing) => [postData, ...existing]);
-  // }
+  function handleAddPost(postData) {
+    fetch("http://localhost:8080/posts/newpost", {
+      method: "POST",
+      body: JSON.stringify(postData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    setPosts((existing) => [postData, ...existing]);
+  }
 
   return (
     <>
