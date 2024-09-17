@@ -15,7 +15,7 @@ const PostList = () => {
   }, []);
 
   function handleAddPost(postData) {
-    fetch("http://localhost:8080/posts/newpo", {
+    fetch("http://localhost:8080/posts/newp", {
       method: "POST",
       body: JSON.stringify(postData),
       headers: {
