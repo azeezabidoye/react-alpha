@@ -37,6 +37,7 @@ const PostList = () => {
       {posts.length === 0 && (
         <div style={{ textAlign: "center", color: "white" }}>
           <h2>No posts yet</h2>
+          <br />
           <p>Start adding posts...</p>
         </div>
       )}
