@@ -16,7 +16,7 @@ const PostList = () => {
 
   function handleAddPost(postData) {
     fetch("http://localhost:8080/posts/", {
-      method: "POST",
+      method: "GET",
       body: JSON.stringify(postData),
       headers: {
         "Content-Type": "application/json",
