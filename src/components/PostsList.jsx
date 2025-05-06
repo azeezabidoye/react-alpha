@@ -4,7 +4,7 @@ import classes from "./PostsList.module.css";
 import { useLoaderData } from "react-router-dom";
 
 const PostList = () => {
-  const posts = useLoaderData;
+  const posts = useLoaderData();
 
   useEffect(() => {
     async function fetchPosts() {
