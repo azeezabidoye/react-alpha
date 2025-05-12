@@ -1,4 +1,4 @@
-// import Post from "./Post";
+import Post from "./Post";
 import { useEffect, useState } from "react";
 import classes from "./PostsList.module.css";
 import { useLoaderData } from "react-router-dom";
