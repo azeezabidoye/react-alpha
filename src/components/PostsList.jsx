@@ -1,7 +1,7 @@
 import Post from "./Post";
 import { useEffect, useState } from "react";
 import classes from "./PostsList.module.css";
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 
 const PostList = () => {
   const posts = useLoaderData();
